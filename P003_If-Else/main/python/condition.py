@@ -3,17 +3,24 @@ Created on Feb 29, 2024
 
 @author: witek
 '''
-string1 = "John Hammond"
-string2 = "John Wick"
+string1 = input("Provide name of first person\n")
+string2 = input("Provide name of second person\n")
 if string1 == string2:
     print("Strings are equal")
+else:
+    print("Strings are not equal")
     
-num1 = 50
-num2 = 100
+num1 = int(input("Provide first number\n"))
+num2 = int(input("Provide second number\n"))
 
 if num1 < num2:
     print(num1, end=" ")
     print("is less than", num2)
-else:
+elif num1 > num2:
     print(num1, end=" ")
-    print("is greater than or equal to", num2)
+    print("is greater than", num2)
+elif num1 == num2:
+    print(num1, end=" ")
+    print("is equal to", num2)
+else:
+    print("Provided wrong values")
