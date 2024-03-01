@@ -23,3 +23,12 @@ print("Dictionary is ",dictionary1)
 print("Removing key contry:")
 dictionary1.pop("country","Key not found")
 print("Dictionary is ", dictionary1)
+print("---------------------------------")
+dictionary2={}
+key1=('name', 'age', 'city')
+for name in key1:
+    value=input("Provide "+name+": ")
+    dictionary2[name]=value
+print(dictionary2.items())
+for key,value in dictionary2.items():
+    print(key, " ", value)

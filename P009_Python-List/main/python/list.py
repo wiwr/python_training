@@ -36,3 +36,15 @@ for value in nested_list:
 print("Clearing a list:")
 del list1[:]
 print("List length is",len(list1))
+print("-----------------------------------------")
+list3=[]
+num1 = 5
+print("Provide ",num1," values")
+for i in range(0, num1):
+    num2=input("value:")
+    list3.append(num2)
+print("List that you provided contains:")
+print(list3)
+num1 = int(input("provide index to remove: "))
+list3.pop(num1)
+print(list3)
