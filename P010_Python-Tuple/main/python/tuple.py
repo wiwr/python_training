@@ -15,3 +15,11 @@ print(tuple2)
 
 tuple3=('a',1,'someword')
 print(tuple3)
+
+tupleA=(1,10,100,40,"John",40,"john")
+print(tupleA[:])
+print(len(tupleA[:]))
+#print(tupleA.index(1000,0))
+print(tupleA.count(1000))
+#tupleA[0]=5
+print(tupleA)

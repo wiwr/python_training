@@ -30,3 +30,13 @@ while year != 0:
     else:
         print(year, "is not a Leap year")
     year = int(input("Enter year or type 0 to exit\n"))
+    
+print()
+for value in range(5,3,-1):
+    print(value, "is even",(value %2 ==0))
+print()
+for value in range(5):
+    print(value, "is even",(value%2 ==0))
+print()
+for value in range(1,10):
+    print(value, "is even",(value%2==0))

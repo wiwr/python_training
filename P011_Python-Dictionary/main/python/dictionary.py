@@ -32,3 +32,16 @@ for name in key1:
 print(dictionary2.items())
 for key,value in dictionary2.items():
     print(key, " ", value)
+    
+dictA = {"fruit":"banana", "vegetable": "carrot"}
+dictA["juice"]="mango"
+dictA["beverage"]="tea"
+print(dictA)
+print(dictA.pop("juice","Key not found"))
+print(dictA)
+for key,value in dictA.items():
+    print(key,value)
+print()
+for key in dictA:
+    print(key,dictA[key])
+    

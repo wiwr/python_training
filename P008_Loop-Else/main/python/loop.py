@@ -12,3 +12,22 @@ for index in range(2,num1-num2):
     break
 else:
     print(num1, "is a prime number")
+print("-------------------------------")
+num1=11
+flag=True
+for factor in range(2,num1):
+    if num1 % factor != 0:
+        continue
+    print("Not prime")
+    flag = False
+    break
+if flag:
+    print("prime")
+print("-------------------------------")
+for factor in range(2,num1):
+    if num1 % factor != 0:
+        continue
+    print("Not prime")
+    break
+else:
+    print("Prime")

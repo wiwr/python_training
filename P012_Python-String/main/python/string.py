@@ -3,6 +3,8 @@ Created on Mar 1, 2024
 
 @author: witek
 '''
+from  keyword import iskeyword
+
 full_name = "John Hammond doesn\'t wait\nJurassic Park\nJurassic World"
 print("String Operations")
 print("String is ", full_name)
@@ -31,3 +33,12 @@ print("Finding index of substring mm in",end=":")
 print(last_name.rfind("mm"))
 print("String concatenation",first_name + last_name)
 print("String multiplication",3* "py")
+
+string1=('the quick brown'
+        'fox jumped over'
+        'the lazy dog'
+        )
+print(string1)
+print(iskeyword('print'))
+print(iskeyword('if'))
+print(iskeyword('for'))
