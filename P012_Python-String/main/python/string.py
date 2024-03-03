@@ -4,6 +4,7 @@ Created on Mar 1, 2024
 @author: witek
 '''
 from  keyword import iskeyword
+import re
 
 full_name = "John Hammond doesn\'t wait\nJurassic Park\nJurassic World"
 print("String Operations")
@@ -58,3 +59,51 @@ print("S[:-1]",S[:-1])
 print("S[:]",S[:])
 print(S + 'xyz')
 print(S * 8)
+print(S.find('ie'))
+print(S.replace('ie','XYZs'))
+S  = 'z' + S[1:]
+print(S)
+S = 'taczka'
+L = list(S)
+print(L)
+L[0] = 'p'
+print(''.join(L))
+B = bytearray(b'mini')
+B.extend(b'maraton')
+print(B)
+print(B.decode())
+
+line = 'aaa,bbb,ccccc,ddd'
+print(line.split(','))
+print(S,S.upper(),S.isalpha())
+line = 'aaa,bbb,ccccc,ddddd\n'
+print(line)
+print(line.rstrip())
+print(line.rstrip().split(','))
+
+print('%s, jajka i %s' % ('mielonka', 'MIELONKA!'))
+print('{0}, jajka i {1}'.format('mielonka','MIELONKA!'))
+print('{}, jajka i {}'.format('mielonka','MIELONKA!'))
+
+print('{:,.2f}'.format(2969999.2567))
+print('%.2f | %+05d' % (3.14159, 42))
+print(dir(S))
+print(help(S.replace))
+msg = """ aaaaaaaaaaaaaaaaaaaaaaaa
+bbbb'''bbbbbbbbbb""bbbbbbbb'bbbb
+cccccccccccccccccccccccccccccc
+"""
+print(msg)
+print(r'C:\tekst\nowy')
+print('sp\xc4m')
+print(b'a\x01c')
+print(u'sp\u00c4m')
+print('spam')
+print('spam'.encode('utf8'))
+print('spam'.encode('utf16'))
+
+match = re.match("Witaj,[\t]*(.*)Robinie", 'Witaj, sir    Robinie')
+print(match.group(1))
+match = re.match('[/:](.*)[/:](.*)[/:](.*)','/usr/home:lumberjack')
+match.groups()
+print(re.split('[/:]','/usr/home/luberjack'))
