@@ -3,6 +3,10 @@ Created on Feb 28, 2024
 
 @author: witek
 '''
+
+import math
+import random
+
 full_name = "John Wick"
 print("Full name is ", full_name)
 num1=50
@@ -37,3 +41,15 @@ print("And Operator: ", True and True)
 print("Or Operation: " , True or False)
 print("Not Operator: ", not True)
 
+print("--------------")
+print("123 + 222 = ", 123 + 222)
+print("1.5 * 4 = ", 1.5 * 4)
+print("2 ** 100 = ", 2 ** 100)
+print("Length of  10 000 is ",len(str(2 ** 10000)))
+print("3.1415 * 2 = ", 3.1415 * 2)
+
+print("pi = ", math.pi)
+print("sqrt = ", math.sqrt(85))
+
+print("Random value: ",random.random())
+print("Random from list: ", random.choice([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]))
