@@ -45,3 +45,69 @@ print()
 for key in dictA:
     print(key,dictA[key])
     
+D = {'jedzenie': 'Mielonka', 'ilość': 4, 'kolor': 'różowy'}
+print(D['jedzenie'])
+D['ilość'] +=1
+print(D)
+
+D2 = {}
+D2['imię'] = 'Robert'
+D2['zawód'] = 'programista'
+D2['wiek'] = 40
+print(D2)
+print(D2['imię'])
+
+D3 = dict(imię='Robert',zawód='programista',wiek=30)
+print(D3)
+D4 = dict(zip(['imię','zawód', 'wiek'], ['Robert', 'programista', 40]))
+print(D4)
+
+rec = {'dane osobowe': {'imię':'Robert', 'nazwisko':'Zielony'}, 'zawód' : ['programista', 'inżynier'], 'wiek': 40.5}
+print(rec['dane osobowe'])
+print(rec['dane osobowe']['nazwisko'])
+print(rec['zawód'])
+print(rec['zawód'][-1])
+rec['zawód'].append('leśniczny')
+print(rec)
+rec = 0
+print(rec)
+
+D5 = {'g':1, 'b':2,'a':3}
+print(D5)
+D5['e'] = 99
+print(D5)
+print('f' in D5)
+if not 'f' in D5:
+    print('nie istnieje')
+    print('naprawdę nie istnieje...')
+    
+value = D.get('x', 0)
+print(value)
+value = D['x'] if 'x' in D else 0
+print(value)
+
+Ks = list(D5.keys())
+print(Ks)
+Ks.sort()
+print(Ks)
+for key in Ks:
+    print(key, '=>', D5[key])
+    
+for key in sorted(D5):
+    print(key, '=>', D5[key])
+
+for c in 'mielonka':
+    print(c.upper())
+    
+x = 4
+while x > 0:
+    print('mielonka!' * x)
+    x -= 1
+    
+squares = []
+for x in [1,2,3,4,5]:
+    squares.append(x ** 2)
+print(squares)    
+    
+squares = [x ** 2 for x in [1, 2, 3, 4, 5]]
+print(squares)
