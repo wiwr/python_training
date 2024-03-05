@@ -53,3 +53,16 @@ print("sqrt = ", math.sqrt(85))
 
 print("Random value: ",random.random())
 print("Random from list: ", random.choice([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]))
+
+x, y = 100, 200
+print("x =", x, "y =", y)
+x, y = y, x
+print("x =", x, "y =",y)
+
+x = (1, 5, 7) * 10
+print(x)
+x = [[1,5,7]] * 10
+print(x)
+for i in range(5):
+    x = 1 if i > 3 else 0
+    print(x)

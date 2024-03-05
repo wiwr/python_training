@@ -31,3 +31,24 @@ for factor in range(2,num1):
     break
 else:
     print("Prime")
+    
+print("-------------------------------")
+s = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+t = 11
+i = 0
+while i < len(s):
+    e = s[i]
+    if e == t:
+        print("done by while")
+        break
+    i += 1
+else:
+    print("Not done while")
+
+for e in s:
+    if e == t:
+        print('For found it')
+        break
+else:
+    print("For didn't find it")
+    

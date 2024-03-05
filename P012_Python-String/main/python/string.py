@@ -107,3 +107,14 @@ print(match.group(1))
 match = re.match('[/:](.*)[/:](.*)[/:](.*)','/usr/home:lumberjack')
 match.groups()
 print(re.split('[/:]','/usr/home/luberjack'))
+
+name = "Mielonka"
+x = F'Hello {name} {["test", "test1"]}'
+print(x)
+
+text = "Hi Mielonka, Witaj, Sir Robin"
+x = {char: text.count(char) for char in set(text)}
+print(x)
+#sort
+#exclude special characters
+#all lowercase

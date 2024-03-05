@@ -59,3 +59,15 @@ def factorial(number):
 is_leap_year(2024)
 leap_year(200,2002,2003,2004,2024)
 print("The factorial of 5 is",factorial(5))
+
+def function1(arg1,arg2,arg3):
+    print(arg1,arg2,arg3)
+
+def function2(arg1=None,arg2=None,arg3=None):
+    print(arg1, arg2, arg3)
+    
+args = [2, 2, 3]
+kwargs = {"arg2": 2, "arg1": 1, "arg3":3}
+
+function1(*args)
+function2(**kwargs)

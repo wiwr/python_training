@@ -50,6 +50,8 @@ print("Provide ",num1," values")
 # print(list3)
 
 listA = [1,10,20,20,2,4,9]
+a, b, c, d, e, f, g = listA
+print(a, b, c, d, e,f,g)
 print(type(listA))
 listB = list(listA)
 print("list1 is ",listA)
@@ -111,3 +113,11 @@ print([ord(x) for x in 'mielonka'])
 print({ord(x) for x in 'mielonka'})
 print({x: ord(x) for x in 'mielonka'})
 print((ord(x) for x in 'mielonka'))
+
+listC = [[1,2],[3,4],[5,6],[-1,4],[-2,5],[-3,7]]
+print(listC)
+listC.sort(key=lambda x: x[0] + x[1])
+print(listC)
+listC.sort(key=lambda x: x[1])
+print(listC)
+

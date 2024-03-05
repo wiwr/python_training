@@ -40,3 +40,12 @@ for value in range(5):
 print()
 for value in range(1,10):
     print(value, "is even",(value%2==0))
+    
+v1 = [i for i in range(29)]
+print(v1)
+
+v2 = [i for i in range(56) if i % 2 == 0]
+print(v2)
+
+v3 = [[7 for _ in range(5)] for _ in range(6)]
+print(v3)
