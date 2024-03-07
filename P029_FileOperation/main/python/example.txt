@@ -1,0 +1,23 @@
+Current balance: 1000
+Deposited 500. New balance: 1500
+Withdrawn 200. New balance: 1300
+Current balance: 324
+Deposited 500. New balance: 824
+Withdrawn 200. New balance: 624
+Current balance: 0
+Deposited 500. New balance: 500
+Withdrawn 200. New balance: 300
+Current balance: 300
+Insufficient funds.
+Current balance: 624
+Insufficient funds.
+Current balance: 1300
+Insufficient funds.
+
+Hello, World!
+This is a test.
+Python is awesome!
+
+Hello, World!
+This is a test.
+Python is awesome!
