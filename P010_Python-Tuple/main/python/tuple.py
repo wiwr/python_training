@@ -23,3 +23,18 @@ print(len(tupleA[:]))
 print(tupleA.count(1000))
 #tupleA[0]=5
 print(tupleA)
+
+t = ("one")
+print(type(t))
+for x in t:
+    print(x)
+
+t = ("one",)
+print(type(t))
+for x in t:
+    print(x)
+    
+if "John" in tupleA:
+    print("Is")
+else:
+    print("Is Not")
