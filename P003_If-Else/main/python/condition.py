@@ -24,3 +24,13 @@ elif num1 == num2:
     print("is equal to", num2)
 else:
     print("Provided wrong values")
+    
+#condition = False
+for condition in [True, False]:
+    if condition:
+        x, y =1, 0
+    else:
+        x, y = None, None
+    print(x, y)    
+    x, y = (1, 0) if condition else (None, None) 
+    print(x, y)
