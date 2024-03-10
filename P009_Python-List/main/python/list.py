@@ -121,3 +121,27 @@ print(listC)
 listC.sort(key=lambda x: x[1])
 print(listC)
 
+listD = [[0] * 5,[1] * 7, [2] * 3]
+print(listD)
+listE = [1 ,2, 3,4, 5]
+listF = listD[0] + listD[1] + listD[2] + listE
+print(listF)
+listF.sort()
+print(listF)
+listG = listF[::2]
+print(listG)
+listH = listG[::-1]
+print(listH)
+listI = [x * x for x in listH]
+print(listI)
+
+uniques = []
+for num in listF:
+    if num not in uniques:
+        uniques.append(num)
+print(uniques)
+
+listJ = ["one","two","three","four","five"]
+print(len(listJ))
+print(listJ)
+
