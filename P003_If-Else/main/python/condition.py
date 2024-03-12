@@ -25,10 +25,10 @@ elif num1 == num2:
 else:
     print("Provided wrong values")
     
-#condition = False
+# condition = False
 for condition in [True, False]:
     if condition:
-        x, y =1, 0
+        x, y = 1, 0
     else:
         x, y = None, None
     print(x, y)    

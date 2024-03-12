@@ -6,6 +6,7 @@ Created on Mar 12, 2024
 import pytest
 import psycopg2
 
+
 @pytest.fixture(scope="module")
 def setup():
     db_host = "127.0.0.1"
@@ -31,6 +32,6 @@ def test_database_connection(setup):
     cursor.execute("SELECT 1")
     result = cursor.fetchone()
     
-    assert result ==(1,)
+    assert result == (1,)
     
     

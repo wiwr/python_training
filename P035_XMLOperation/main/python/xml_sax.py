@@ -27,7 +27,9 @@ class GroupHandler(xml.sax.ContentHandler):
             print("Currency: {}".format(self.name))
         self.current = ""
         
-handler = GroupHandler()
-parser = xml.sax.make_parser()
-parser.setContentHandler(handler)
-parser.parse('sample.xml')
+        
+if __name__ == "__main__":        
+    handler = GroupHandler()
+    parser = xml.sax.make_parser()
+    parser.setContentHandler(handler)
+    parser.parse('sample.xml')

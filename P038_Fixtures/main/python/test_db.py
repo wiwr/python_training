@@ -6,6 +6,7 @@ Created on Mar 11, 2024
 import pytest
 import psycopg2
 
+
 @pytest.fixture(scope="module")
 def db_connection():
     db_host = "127.0.0.1"
@@ -23,6 +24,7 @@ def db_connection():
     yield connection
     connection.close()
     
+    
 def test_database_connection(db_connection):
     assert db_connection is not None
     
@@ -30,4 +32,5 @@ def test_database_connection(db_connection):
     cursor.execute("SELECT 1")
     result = cursor.fetchone()
     assert result == (1,)
+    
     

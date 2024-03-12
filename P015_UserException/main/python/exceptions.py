@@ -13,8 +13,9 @@ def divide(x,y):
         raise MyCustomError("Division by zero is not allowed!")
     return x/y
 
-try:
-    result = divide(10,0)
-    print("Result:", result)
-except MyCustomError as e:
-    print("Custom error occurred:",e.message)
+if __name__ == "__main__":
+    try:
+        result = divide(10,0)
+        print("Result:", result)
+    except MyCustomError as e:
+        print("Custom error occurred:",e.message)

@@ -18,12 +18,14 @@ def is_leap_year(year):
     else:
         print(year, "is not a Leap year")
         return False
+
     
 def factorial(number):
     if number == 0 or number == 1:
         return 1
     else:
         return number * factorial(number-1)
-    
-is_leap_year(2001)
-print("The factorial of 5 is", factorial(5))
+
+if __name__ == "__main__":    
+    is_leap_year(2001)
+    print("The factorial of 5 is", factorial(5))

@@ -6,6 +6,7 @@ Created on Mar 11, 2024
 import pytest
 import psycopg2
 
+
 @pytest.fixture(scope="module", params=[
     ("127.0.0.1","testing","student","student")
 ])
@@ -27,8 +28,11 @@ def db_data(request):
     connection.close()
     return result
 
+
 def test_database_data(db_data):
     assert db_data is not None
     assert len(db_data) > 0
     for row in db_data:
         assert isinstance(row, tuple)
+        
+        

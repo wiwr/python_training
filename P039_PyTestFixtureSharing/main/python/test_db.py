@@ -11,3 +11,5 @@ def test_database_connection(db_connection):
     result = cursor.fetchone()
     
     assert result == (1,)
+    
+    
