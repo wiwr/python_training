@@ -3,6 +3,8 @@ Created on Mar 11, 2024
 
 @author: witek
 '''
+from datetime import datetime
+
 class Hello:
     def __init__(self, message):
         self.message = message
@@ -66,3 +68,33 @@ if __name__ == "__main__":
     print(f'{num:#b}')
     print(f'{num:#_b}')
     print("-"*dashNum)
+    
+    
+    big_number: int = 1_620_000_000
+    print(f'{big_number:e}')
+    print(f'{big_number:.2e}')
+    
+    now: datetime = datetime.now()
+    date_space: str = '%Y-%m-%d'
+    print(f'{now:{date_space}}')
+    
+    number: float = 1000000.1234567
+    spec: str = ',.2f'
+    print(f'{number:{spec}}')
+    
+    custom_folder: str = "Indetly"
+    path: str = r'\Users\federico\Documents\folder'
+    print(path)
+    path: str = fr'\Users\federico\Documents\{custom_folder}'
+    print(path)
+    
+    a: float = 0.1
+    b: float = 0.2
+    print(f'{a + b = }')
+    print(f'{a + b = :.1f}')
+    
+    name: str = 'Bob'
+    print(f'{name = }')
+    
+    
+    print(f'{name = !s}')
