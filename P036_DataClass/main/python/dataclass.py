@@ -3,7 +3,10 @@ Created on Mar 10, 2024
 
 @author: witek
 '''
+import inspect
+from pprint import pprint
 from dataclasses import dataclass, field
+from click.types import INT
 
 @dataclass(order=True) #, frozen=True)
 class Book:
@@ -27,8 +30,19 @@ class Book:
     #     self.author = author
     #     self.pages = int(pages)
     #     self.isbn = isbn
-    
 
+
+@dataclass(frozen=True, order=True)
+class Comment:
+    id: int
+    text: str    
+
+
+def main():
+    comment = Comment(1, "I love it!")
+    print(comment)
+    pprint(inspect.getmembers(Comment, inspect.isfunction))
+    
 if __name__ == "__main__":        
     book1 = Book("Dziennik Cwaniaczka", "Jeff Kinney", 200, "978-83-10-13950-4")
     book2 = Book("Opowieść wigilijna", "Chales Dickens", 119, "978-83-7399-310-5")
@@ -43,3 +57,5 @@ if __name__ == "__main__":
     
     print(book3 == book4)
     print(book1 == book2)
+    
+    main()
