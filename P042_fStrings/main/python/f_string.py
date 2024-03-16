@@ -76,7 +76,7 @@ if __name__ == "__main__":
     
     now: datetime = datetime.now()
     date_space: str = '%Y-%m-%d'
-    print(f'{now:{date_space}}')
+    print(f'{now=:{date_space}}')
     
     number: float = 1000000.1234567
     spec: str = ',.2f'
@@ -98,3 +98,5 @@ if __name__ == "__main__":
     
     
     print(f'{name = !s}')
+    print(f'{name = !a}')
+    print(f'{name = !r}')
