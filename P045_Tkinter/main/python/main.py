@@ -4,9 +4,11 @@ root = Tk()
 
 e = Entry(root, width=50)
 e.pack()
+e.insert(0, "Enter Your Name: ")
 
 def myClick():
-    myLabel = Label(root, text=e.get())
+    hello = "Hello " + e.get()
+    myLabel = Label(root, text=hello)
     myLabel.pack()
     
     
