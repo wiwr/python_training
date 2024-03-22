@@ -1,19 +1,19 @@
 from tkinter import *
 from PIL import ImageTk,Image
+from tkinter import filedialog
+
+
+root = Tk()
+root.title("Codemy.com")
+
 
 
 def open():
-    global my_img
-    top = Toplevel()
-    top.title("Second")
-    label = Label(top, text="Hello World").pack()
-    my_img = ImageTk.PhotoImage(Image.open("images/hot.png"))
-    my_label = Label(top, image=my_img).pack()
-    buttonC = Button(top, text="Close window", command=top.destroy).pack()
-    
-root = Tk()
-root.title("Codemy.com Image Viewer")
+    global my_image
+    root.filename = filedialog.askopenfilename(initialdir="", title="Select A File", filetypes=(("png files", "*.png"),("all files", "*")))
+    my_label = Label(root, text=root.filename).pack()
+    my_image = ImageTk.PhotoImage(Image.open(root.filename))
+    my_image_label = Label(image=my_image).pack()
 
-button = Button(root, text="Open Second Window", command=open).pack()
-
+my_button = Button(root, text="Open File", command=open).pack()
 root.mainloop()
