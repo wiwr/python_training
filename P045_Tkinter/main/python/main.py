@@ -4,12 +4,37 @@ from PIL import ImageTk,Image
 root = Tk()
 root.title("Codemy.com Image Viewer")
 
-frame = LabelFrame(root, text="This is my Frame...", padx=5, pady=5)
-frame.pack(padx=10, pady=10)
+r = IntVar()
+r.set("2")
 
-button1 = Button(frame, text="Don't Click Here!")
-button2 = Button(frame, text="...or here!")
-button1.grid(row=0, column=0)
-button2.grid(row=1, column=1)
+def clicked(value):
+    myLabel = Label(root,text=value)
+    myLabel.pack()
 
+Radiobutton(root, text="Option 1", variable=r, value=1, command=lambda: clicked(r.get())).pack()
+Radiobutton(root, text="Option 2", variable=r, value=2, command=lambda: clicked(r.get())).pack()
+Radiobutton(root, text="Option 3", variable=r, value=3, command=lambda: clicked(r.get())).pack()
+Radiobutton(root, text="Option 4", variable=r, value=4, command=lambda: clicked(r.get())).pack()
+
+MODES = [
+    ("Pepperoni", "Pepperoni"),
+    ("Cheese", "Cheese"),
+    ("Mushroom", "Mushroom"),
+    ("Onion", "Onion")    
+    ]
+
+pizza = StringVar()
+pizza.set("Pepperoni")
+
+myLabel = Label(root, text=r.get())
+myLabel.pack()
+
+for text, mode in MODES:
+    Radiobutton(root, text=text, variable=pizza, value=mode).pack(anchor=W)
+
+pizzaLabel = Label(root, text=pizza.get())
+pizzaLabel.pack()
+
+myButton = Button(root, text="Click Me!", command=lambda: clicked(r.get()))
+myButton.pack()
 root.mainloop()
