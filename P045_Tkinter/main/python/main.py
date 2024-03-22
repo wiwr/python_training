@@ -1,41 +1,19 @@
 from tkinter import *
 from PIL import ImageTk,Image
-from tkinter import messagebox
 
+
+def open():
+    global my_img
+    top = Toplevel()
+    top.title("Second")
+    label = Label(top, text="Hello World").pack()
+    my_img = ImageTk.PhotoImage(Image.open("images/hot.png"))
+    my_label = Label(top, image=my_img).pack()
+    buttonC = Button(top, text="Close window", command=top.destroy).pack()
     
 root = Tk()
 root.title("Codemy.com Image Viewer")
 
-
-def info():
-    messagebox.showinfo("This is my Popup!", "Hello Info Popups!")
-
-
-def warning():
-    messagebox.showwarning("This is my Popup!", "Hello Warning Popups!")
-    
-    
-def error():
-    messagebox.showerror("This is my Popup!", "Hello Error Popups!")
-    
-    
-def askquestion():
-    response = messagebox.askquestion("This is my Popup!", "Hello AskQuestion Popups!")
-    Label(root, text=response).pack()
-    
-def askokcancel():
-    response = messagebox.askokcancel("This is my Popup!", "Hello AskOkCancel Popups!")
-    Label(root, text=response).pack()
-    
-def askyesno():
-    response = messagebox.askyesno("This is my Popup!", "Hello AskYesNo Popups!")
-    Label(root, text=response).pack()
-                    
-Button(root, text="Popup - showinfo", command=info).pack()
-Button(root, text="Popup - showwarning", command=warning).pack()
-Button(root, text="Popup - showerror", command=error).pack()
-Button(root, text="Popup - askquestion", command=askquestion).pack()
-Button(root, text="Popup - askokcancel", command=askokcancel).pack()
-Button(root, text="Popup - askyesno", command=askyesno).pack()
+button = Button(root, text="Open Second Window", command=open).pack()
 
 root.mainloop()
