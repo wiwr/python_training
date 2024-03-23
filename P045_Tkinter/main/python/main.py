@@ -7,16 +7,21 @@ root = Tk()
 root.title("Codemy.com")
 root.geometry("400x400")
 
-var = StringVar()
-
+options = ["Monday", 
+           "Tuesday", 
+           "Wednesday", 
+           "Thursday", 
+           "Friday"
+           ]
 
 def show():
-    myLabel = Label(root, text=var.get()).pack()
+    myLabel = Label(root, text=clicked.get()).pack()
 
-checkButton = Checkbutton(root, text="Check this box, I dare you!", variable=var, onvalue="ON", offvalue="OFF")
-checkButton.deselect()
-checkButton.pack()
+clicked = StringVar()
+clicked.set(options[0])
 
+drop = OptionMenu(root, clicked, *options)
+drop.pack()
 
 myButton = Button(root, text="Show Selection", command=show).pack()
 
