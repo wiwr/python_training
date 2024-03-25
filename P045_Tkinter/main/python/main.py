@@ -47,6 +47,7 @@ def query():
     conn = sqlite3.connect('address_book.db')
 
     c = conn.cursor()
+    
     c.execute("SELECT *,oid FROM addresses")
     records = c.fetchall()
     
@@ -59,11 +60,61 @@ def query():
     conn.commit()
     conn.close()  
     
+    
+def update():
+    conn = sqlite3.connect('address_book.db')
+
+    c = conn.cursor()
+    
+    record_id = delete_box.get()
+    c.execute("""UPDATE addresses SET 
+                first_name = :f_name,
+                last_name =  :l_name, 
+                address = :address, 
+                city = :city, 
+                state = :state, 
+                zipcode = :zipcode
+                
+                WHERE oid = :oid""",
+              {
+                  'oid': record_id,
+                  'f_name': f_name_editor.get(),
+                  'l_name': l_name_editor.get(),
+                  'address': address_editor.get(),
+                  'city': city_editor.get(),
+                  'state': state_editor.get(),
+                  'zipcode': zipcode_editor.get()
+            })
+    
+    
+    conn.commit()
+    conn.close() 
+    
+    editor.destroy()
+    
 
 def edit():
+    global editor
     editor = Tk()
     editor.title('Codemy.com - Lear To Code!')
     editor.geometry("500x400")
+
+    conn = sqlite3.connect('address_book.db')
+
+    c = conn.cursor()
+
+    record_id = delete_box.get()
+    print(f"{record_id = }")
+    
+    c.execute("SELECT * FROM addresses WHERE oid = " + record_id)
+    records = c.fetchall()
+
+    global f_name_editor
+    global l_name_editor
+    global address_editor
+    global city_editor
+    global state_editor
+    global zipcode_editor
     
     f_name_editor = Entry(editor, width=30)
     f_name_editor.grid(row=0, column=1, padx=20, pady=(10, 0))
@@ -101,7 +152,15 @@ def edit():
     zipcode_label_editor = Label(editor, text="Zipcode")
     zipcode_label_editor.grid(row=5, column=0)
     
-    submitButton_editor = Button(editor, text="Save Recoord", command=submit)
+    for record in records:
+        f_name_editor.insert(0, record[0])
+        l_name_editor.insert(0, record[1])
+        address_editor.insert(0, record[2])
+        city_editor.insert(0, record[3])
+        state_editor.insert(0, record[4])
+        zipcode_editor.insert(0, record[5])
+    
+    submitButton_editor = Button(editor, text="Save Recoord", command=update)
     submitButton_editor.grid(row=6, column=0, columnspan=2, pady=10, padx=10, ipadx=137 ) 
 
 
